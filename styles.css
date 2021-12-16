@@ -53,6 +53,17 @@ li:active {
     display: block;
 }
 
+img {
+    height: 670px;
+    width: fit-content;
+}
+
+p {
+    padding: 50px;
+    font-size: x-large;
+    color: cyan;
+}
+
 form {
     align-items: center;
     position: absolute;
