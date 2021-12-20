@@ -1,161 +1,111 @@
-<html>
-
-<style>
-    @media screen and (max-width: 750px) {
-        .reg-form {
-            width: 600px;
-            height: auto;
-        }
-    }
-</style>
-
-<head>
-    <title>Delivery</title>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head>
-
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <img src="assets/logo.png" style="width: 70px; height: 70px;" alt="">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav" ALIGN="RIGHT">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.html">Register</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="reg-form container my-5 py-5 z-depth-1">
-
-
-        <!--Section: Content-->
-        <section class="px-md-1 mx-md-5 text-center text-lg-left dark-grey-text">
-
-
-            <!--Grid row-->
-            <div class="row d-flex justify-content-center">
-
-                <!--Grid column-->
-                <div class="col-md-6" style="background-color: #212529; border-radius : 15px; padding: 40px;">
-
-                    <!-- Default form register -->
-                    <form class="text-center" action="#!">
-
-                        <p class="h4 mb-4" style="color: cornsilk;">Sign up</p>
-
-                        <div class="form-row mb-4">
-                            <div class="col">
-                                <!-- First name -->
-                                <input type="text" id="defaultRegisterFormFirstName" class="form-control" placeholder="First name" style="background-color: #212529; border-radius : 15px; margin-top: 25px; color: floralwhite;">
-                            </div>
-                            <div class="col">
-                                <!-- Last name -->
-                                <input type="text" id="defaultRegisterFormLastName" class="form-control" placeholder="Last name" style="background-color: #212529; border-radius : 15px; margin-top: 25px; color: floralwhite;">
-                            </div>
-                        </div>
-
-                        <!-- E-mail -->
-                        <input type="email" id="defaultRegisterFormEmail" class="form-control mb-4" placeholder="E-mail" style="background-color: #212529; border-radius : 15px; margin-top: 25px; color: floralwhite;">
-
-                        <!-- Password -->
-                        <input type="password" id="defaultRegisterFormPassword" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock" style="background-color: #212529; border-radius : 15px; margin-top: 25px; color: floralwhite">
-                        <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Register</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+<link rel="stylesheet" href="Register.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
     
-                </small>
-
-                        <!-- Phone number -->
-                        <input type="number" id="defaultRegisterPhonePassword" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock" style="background-color: #212529; border-radius : 15px; margin-top: 25px; color: floralwhite">
-                        <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
-
-                </small>
-
-                        <!-- Newsletter -->
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="defaultRegisterFormNewsletter">
-                            <label class="custom-control-label" for="defaultRegisterFormNewsletter" style="background-color: #212529; border-radius : 15px; color : floralwhite ;margin-top: 25px;">Subscribe to our
-                    newsletter</label>
-                        </div>
-
-                        <!-- Sign up button -->
-                        <button class="btn btn-info my-4 btn-block" type="submit">Sign in</button>
-
-
-                        <!-- Terms of service -->
-                        <p style="color: floralwhite;">By clicking
-                            <em>Sign up</em> you agree to our
-                            <a href="" target="_blank">terms of service</a>
-
-                    </form>
-                    <!-- Default form register -->
-
-                </div>
-                <!--Grid column-->
-
+    
+    <script type="application/ld+json">{
+		"@context": "http://schema.org",
+		"@type": "Organization",
+		"name": "Railways"
+}</script>
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Register">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-header" id="sec-5cef"><div class="u-clearfix u-sheet u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/821405.png" alt=""></span>
+        <h4 class="u-text u-text-default u-text-1">Indian Railways</h4>
+        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+          <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
+            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#" style="padding: 8px 10px; font-size: calc(1em + 16px);">
+              <svg viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
+</symbol>
+</defs></svg>
+            </a>
+          </div>
+          <div class="u-custom-menu u-nav-container">
+            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="About.html" style="padding: 10px 20px;">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Login.html" style="padding: 10px 20px;">Login</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Register.html" style="padding: 10px 20px;">Register</a>
+</li></ul>
+          </div>
+          <div class="u-custom-menu u-nav-container-collapse">
+            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+              <div class="u-inner-container-layout u-sidenav-overflow">
+                <div class="u-menu-close"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Home.html" style="padding: 10px 20px;">Home</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="About.html" style="padding: 10px 20px;">About</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.html" style="padding: 10px 20px;">Login</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.html" style="padding: 10px 20px;">Register</a>
+</li></ul>
+              </div>
             </div>
-            <!--Grid row-->
-
-
-        </section>
-        <!--Section: Content-->
-
-
-    </div>
-
-    <footer class="page-footer font-small teal pt-4" style="background-color: #212529; left: 0;bottom: 0;">
-
-        <!-- Footer Text -->
-        <div class="container-fluid text-center text-md-left">
-
-            <!-- Grid row -->
-            <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-
-                    <!-- Content -->
-                    <h5 class="text-uppercase font-weight-bold" style="color: azure;">Footer text 1</h5>
-                    <p style="color: azure;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita sapiente sint, nulla, nihil repudiandae commodi voluptatibus corrupti animi sequi aliquid magnam debitis, maxime quam recusandae harum esse fugiat. Itaque, culpa?</p>
-
-                </div>
-                <!-- Grid column -->
-
-                <hr style="color: azure;" class="clearfix w-100 d-md-none pb-3">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mb-md-0 mb-3">
-
-                    <!-- Content -->
-                    <h5 style="color: azure;" class="text-uppercase font-weight-bold">Footer text 2</h5>
-                    <p style="color: azure;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio deserunt fuga perferendis modi earum commodi aperiam temporibus quod nulla nesciunt aliquid debitis ullam omnis quos ipsam, aspernatur id excepturi hic.</p>
-
-                </div>
-                <!-- Grid column -->
-
+            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+          </div>
+        </nav>
+      </div></header>
+    <section class="u-border-2 u-border-grey-75 u-clearfix u-section-1" id="sec-80ae">
+      <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Register&nbsp;</h1>
+        <div class="u-form u-form-1">
+          <form action="#" method="POST" class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom" name="form" style="padding: 10px;">
+            <div class="u-form-group u-form-name">
+              <label for="name-750f" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="Enter your Name" id="name-750f" name="name" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
             </div>
-            <!-- Grid row -->
-
+            <div class="u-form-email u-form-group">
+              <label for="email-750f" class="u-form-control-hidden u-label"></label>
+              <input type="email" placeholder="Enter a valid email address" id="email-750f" name="email" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white" required="">
+            </div>
+            <div class="u-form-group u-form-group-3">
+              <label for="text-752a" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="enter password" id="text-752a" name="text" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+            </div>
+            <div class="u-form-group u-form-group-4">
+              <label for="text-2e20" class="u-form-control-hidden u-label"></label>
+              <input type="text" placeholder="re-type password" id="text-2e20" name="text-1" class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white">
+            </div>
+            <div class="u-align-left u-form-group u-form-submit">
+              <a href="#" class="u-btn u-btn-submit u-button-style">Submit</a>
+              <input type="submit" value="submit" class="u-form-control-hidden">
+            </div>
+            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>
+            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>
+            <input type="hidden" value="" name="recaptchaResponse">
+          </form>
         </div>
-        <!-- Footer Text -->
-
-        <!-- Copyright -->
-        <div style="color: azure;" class="footer-copyright text-center py-3">© 2021 Copyright:
-            <a style="color: azure;" href="https://github.com/Adhokshaja73">Adhokshaja</a>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
-</body>
-
+      </div>
+    </section>
+    
+    
+    <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-e552"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Footer Text&nbsp;<br>Lorem Ipsum&nbsp;Lorem IpsumLorem IpsumLorem IpsumLorem Ipsum
+        </p>
+      </div></footer>
+    <section class="u-backlink u-clearfix u-grey-80">
+      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+        <span>Website Templates</span>
+      </a>
+      <p class="u-text">
+        <span>created with</span>
+      </p>
+      <a class="u-link" href="" target="_blank">
+        <span>Website Builder Software</span>
+      </a>. 
+    </section>
+  </body>
 </html>
