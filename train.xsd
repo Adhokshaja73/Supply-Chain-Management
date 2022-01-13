@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<train_ns:schema xmlns:train_ns="http://www.w3.org/2001/XMLSchema">
+	<train_ns:element name="train_list">
+
+		<train_ns:complexType>
+			<train_ns:sequence>
+				<train_ns:element name="train">
+
+					<train_ns:complexType>
+						<train_ns:sequence>
+							<train_ns:element name="train_name" type="trainName" />
+							<train_ns:element name="train_code" type="trainCode" />
+
+							<train_ns:element name="start_station_name" type="mName" />
+							<train_ns:element name="start_station_code" type="stationCode" />
+
+
+							<train_ns:element name="end_station_name" type="mName" />
+							<train_ns:element name="end_station_code" type="stationCode" />
+
+
+							<train_ns:element name="previous_station_name" type="mName" />
+							<train_ns:element name="previous_station_code" type="stationCode" />
+
+
+							<train_ns:element name="current_station_name" type="mName" />
+							<train_ns:element name="current_station_code" type="stationCode" />
+
+
+							<train_ns:element name="track_id" type="trackID" />
+
+
+							<train_ns:element name="emp_name" type="mName" />
+
+						</train_ns:sequence>
+					</train_ns:complexType>
+				</train_ns:element>
+			</train_ns:sequence>
+		</train_ns:complexType>
+
+
+	</train_ns:element>
+
+	<train_ns:simpleType name="trackID">
+		<train_ns:restriction base="train_ns:string">
+			<train_ns:length value="5" />
+			<train_ns:pattern value="[a-z][a-z][0-9][0-9][0-9]" />
+		</train_ns:restriction>
+	</train_ns:simpleType>
+
+	<train_ns:simpleType name="empID">
+		<train_ns:restriction base="train_ns:string">
+			<train_ns:length value="6" />
+			<train_ns:pattern value="[a-z][a-z][a-z][a-z][0-9][0-9]" />
+		</train_ns:restriction>
+	</train_ns:simpleType>
+
+	<train_ns:simpleType name="trainCode">
+		<train_ns:restriction base="train_ns:string">
+			<train_ns:length value="8" />
+			<train_ns:pattern value="[a-z][a-z][a-z][0-9][0-9][0-9][0-9][0-9]" />
+		</train_ns:restriction>
+	</train_ns:simpleType>
+
+	<train_ns:simpleType name="stationCode">
+		<train_ns:restriction base="train_ns:string">
+			<train_ns:length value="5" />
+			<train_ns:pattern value="[A-Z][A-Z][A-Z][A-Z][A-Z]" />
+		</train_ns:restriction>
+	</train_ns:simpleType>
+
+	<train_ns:simpleType name="mName">
+		<train_ns:restriction base="train_ns:string">
+			<train_ns:minLength value="4" />
+			<train_ns:maxLength value="15" />
+		</train_ns:restriction>
+	</train_ns:simpleType>
+
+	<train_ns:simpleType name="trainName">
+		<train_ns:restriction base="train_ns:string">
+			<train_ns:minLength value="4" />
+			<train_ns:maxLength value="15" />
+		</train_ns:restriction>
+	</train_ns:simpleType>
+</train_ns:schema>

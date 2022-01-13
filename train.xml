@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="lab04.xsl"?>
+<train_list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="train.xsd">
+	<train>
+		<train_name>Talguppa express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>KSR123</start_station_code>
+
+		<end_station_name>Talguppa</end_station_name>
+		<end_station_code>TLGP</end_station_code>
+		<previous_station_name>Shimogga</previous_station_name>
+		<previous_station_code>SMG</previous_station_code>
+
+		<current_station_name>Sagara</current_station_name>
+		<current_station_code>SGR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>Ramesh S</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPRDK</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>GOARJ</previous_station_name>
+		<previous_station_code>GJRJA</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PUNES</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>dasdf</emp_name>
+	</train>
+
+	<train>
+		<train_name>Chennai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Chennai</end_station_name>
+		<end_station_code>CHSR</end_station_code>
+		<previous_station_name>Mysore</previous_station_name>
+		<previous_station_code>MSR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>Mahesh</emp_name>
+	</train>
+
+	<train>
+		<train_name>Mumbai Express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>Suresh</emp_name>
+	</train>
+
+	<train>
+		<train_name>Shimogga express</train_name>
+		<train_code>bcd45678</train_code>
+		<start_station_name>Banglore</start_station_name>
+		<start_station_code>YPR</start_station_code>
+		<end_station_name>Mumbai</end_station_name>
+		<end_station_code>FASVS</end_station_code>
+		<previous_station_name>Goa</previous_station_name>
+		<previous_station_code>GAR</previous_station_code>
+		<current_station_name>Pune</current_station_name>
+		<current_station_code>PNR</current_station_code>
+		<track_id>tr123</track_id>
+		<emp_name>Swami</emp_name>
+	</train>
+
+
+</train_list>
