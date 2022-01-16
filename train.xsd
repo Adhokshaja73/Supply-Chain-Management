@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <train_ns:schema xmlns:train_ns="http://www.w3.org/2001/XMLSchema">
-	<train_ns:element name="train_list">
+	<train_ns:element name="train_list" >
 
 		<train_ns:complexType>
 			<train_ns:sequence>
-				<train_ns:element name="train">
+				<train_ns:element name="train" maxOccurs="unbounded">
 
 					<train_ns:complexType>
 						<train_ns:sequence>

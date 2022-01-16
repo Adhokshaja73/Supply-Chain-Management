@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Train Schedule</title>
+</head>
+
+<body onload="loadXMLDoc();">
+    <h1>Train Schedule</h1>
+    <table id="table"></table>
+    <script>
+        function loadXMLDoc() {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+                }
+            };
+            xmlhttp.open("GET", "train.xml", true);
+            xmlhttp.send();
+        }
+
+        function myFunction(xml) {
+            var i;
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>Train Name</th><th>Train Code</th><th>Start Station Name</th><th>Start Station Code</th><th>End station name</th><th>End Station Code</th><th>Engine operator</th></tr>";
+            var x = xmlDoc.getElementsByTagName("train");
+
+
+            for (i = 0; i < x.length; i++) {
+                x[i] = x[i].getElementsByTagName("train_name")[0].childNodes[0].nodeValue = "Changed Name  "
+
+                table += "<tr><td>" + x[i].getElementsByTagName("train_name")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("train_code")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("start_station_name")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("start_station_code")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("end_station_name")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("end_station_code")[0].childNodes[0].nodeValue +
+                    "</td><td>" + x[i].getElementsByTagName("emp_name")[0].childNodes[0].nodeValue +
+                    "</td></tr>";
+            }
+
+            document.getElementById("table").innerHTML = table;
+        }
+    </script>
+</body>
+
+</html>
