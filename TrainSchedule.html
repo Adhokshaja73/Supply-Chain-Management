@@ -3,30 +3,47 @@
 
 <head>
     <title>Train Schedule</title>
+
 </head>
 
 <body onload="loadXMLDoc();">
     <h1>Train Schedule</h1>
+    <div style="margin-bottom: 30px;">
+        <input type="number" id="indexToDel" placeholder="Record to delete">
+        <button onclick="deleteRecord();">Delete</button>
+    </div>
+    <div style="margin-bottom: 30px;">
+        <input type="text" id="tName" placeholder="Train Name">
+        <input type="text" id="tCode" placeholder="Train Code">
+        <input type="text" id="sName" placeholder="Start Station Name">
+        <input type="text" id="sCode" placeholder="Start Station Code">
+        <input type="text" id="eName" placeholder="End Station Name">
+        <input type="text" id="eCode" placeholder="End Station Code">
+        <input type="text" id="opName" placeholder="Engine operator">
+        <button onclick="addNewRecord();">Add</button>
+
+    </div>
+
     <table id="table"></table>
     <script>
+        var xmlDoc
+
         function loadXMLDoc() {
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    myFunction(this);
+                    xmlDoc = this.responseXML;
+                    showTable();
                 }
             };
             xmlhttp.open("GET", "train.xml", true);
             xmlhttp.send();
         }
 
-        function myFunction(xml) {
+        function showTable() {
             var i;
-            var xmlDoc = xml.responseXML;
             var table = "<tr><th>Train Name</th><th>Train Code</th><th>Start Station Name</th><th>Start Station Code</th><th>End station name</th><th>End Station Code</th><th>Engine operator</th></tr>";
             var x = xmlDoc.getElementsByTagName("train");
-
-
             for (i = 0; i < x.length; i++) {
                 x[i] = x[i].getElementsByTagName("train_name")[0].childNodes[0].nodeValue = "Changed Name  "
 
@@ -41,6 +58,28 @@
             }
 
             document.getElementById("table").innerHTML = table;
+        }
+
+
+        function deleteRecord() {
+            var i = document.getElementById("indexToDel").value;
+            y = xmlDoc.getElementsByTagName("train")[i];
+            xmlDoc.documentElement.removeChild(y);
+            showTable();
+        }
+
+        function addNewRecord() {
+            var i;
+            var x = [];
+            train = xmlDoc.createElement("train");
+            train.appendChild(xmlDoc.createElement("train_name").appendChild(xmlDoc.createTextNode(document.getElementById("tName").value)));
+            train.appendChild(xmlDoc.createElement("train_code").appendChild(xmlDoc.createTextNode(document.getElementById("tCode").value)));
+            train.appendChild(xmlDoc.createElement("start_station_name").appendChild(xmlDoc.createTextNode(document.getElementById("sName").value)));
+            train.appendChild(xmlDoc.createElement("start_station_code").appendChild(xmlDoc.createTextNode(document.getElementById("sCode").value)));
+            train.appendChild(xmlDoc.createElement("end_station_name").appendChild(xmlDoc.createTextNode(document.getElementById("eName").value)));
+            train.appendChild(xmlDoc.createElement("end_station_code").appendChild(xmlDoc.createTextNode(document.getElementById("eCode").value)));
+            train.appendChild(xmlDoc.createElement("emp_name").appendChild(xmlDoc.createTextNode(document.getElementById("opName").value)));
+            showTable();
         }
     </script>
 </body>
