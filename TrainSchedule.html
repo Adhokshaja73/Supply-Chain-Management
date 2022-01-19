@@ -13,15 +13,16 @@
         <button onclick="deleteRecord();">Delete</button>
     </div>
     <div style="margin-bottom: 30px;">
-        <input type="text" id="tName" placeholder="Train Name">
-        <input type="text" id="tCode" placeholder="Train Code">
-        <input type="text" id="sName" placeholder="Start Station Name">
-        <input type="text" id="sCode" placeholder="Start Station Code">
-        <input type="text" id="eName" placeholder="End Station Name">
-        <input type="text" id="eCode" placeholder="End Station Code">
-        <input type="text" id="opName" placeholder="Engine operator">
-        <button onclick="addNewRecord();">Add</button>
-
+        <form id="newRecForm">
+            <input type="text" id="tName" placeholder="Train Name">
+            <input type="text" id="tCode" placeholder="Train Code">
+            <input type="text" id="sName" placeholder="Start Station Name">
+            <input type="text" id="sCode" placeholder="Start Station Code">
+            <input type="text" id="eName" placeholder="End Station Name">
+            <input type="text" id="eCode" placeholder="End Station Code">
+            <input type="text" id="opName" placeholder="Engine operator">
+            <button onclick="addNewRecord()">Add</button>
+        </form>
     </div>
 
     <table id="table"></table>
@@ -45,7 +46,6 @@
             var table = "<tr><th>Train Name</th><th>Train Code</th><th>Start Station Name</th><th>Start Station Code</th><th>End station name</th><th>End Station Code</th><th>Engine operator</th></tr>";
             var x = xmlDoc.getElementsByTagName("train");
             for (i = 0; i < x.length; i++) {
-                x[i] = x[i].getElementsByTagName("train_name")[0].childNodes[0].nodeValue = "Changed Name  "
 
                 table += "<tr><td>" + x[i].getElementsByTagName("train_name")[0].childNodes[0].nodeValue +
                     "</td><td>" + x[i].getElementsByTagName("train_code")[0].childNodes[0].nodeValue +
@@ -69,17 +69,24 @@
         }
 
         function addNewRecord() {
-            var i;
-            var x = [];
-            train = xmlDoc.createElement("train");
-            train.appendChild(xmlDoc.createElement("train_name").appendChild(xmlDoc.createTextNode(document.getElementById("tName").value)));
-            train.appendChild(xmlDoc.createElement("train_code").appendChild(xmlDoc.createTextNode(document.getElementById("tCode").value)));
-            train.appendChild(xmlDoc.createElement("start_station_name").appendChild(xmlDoc.createTextNode(document.getElementById("sName").value)));
-            train.appendChild(xmlDoc.createElement("start_station_code").appendChild(xmlDoc.createTextNode(document.getElementById("sCode").value)));
-            train.appendChild(xmlDoc.createElement("end_station_name").appendChild(xmlDoc.createTextNode(document.getElementById("eName").value)));
-            train.appendChild(xmlDoc.createElement("end_station_code").appendChild(xmlDoc.createTextNode(document.getElementById("eCode").value)));
-            train.appendChild(xmlDoc.createElement("emp_name").appendChild(xmlDoc.createTextNode(document.getElementById("opName").value)));
-            showTable();
+            var i
+            var mTrain = []
+            var x = document.getElementById("newRecForm")
+            train = xmlDoc.createElement("train")
+            mTrain[0] = xmlDoc.createElement("train_name")
+            mTrain[1] = xmlDoc.createElement("train_code")
+            mTrain[2] = xmlDoc.createElement("start_station_name")
+            mTrain[3] = xmlDoc.createElement("start_station_code")
+            mTrain[4] = xmlDoc.createElement("end_station_name")
+            mTrain[5] = xmlDoc.createElement("end_station_code")
+            mTrain[6] = xmlDoc.createElement("emp_name")
+            for (i = 0; i < 7; i++) {
+                mTrain[i].appendChild(xmlDoc.createTextNode(x.elements[i].value))
+                train.appendChild(mTrain[i])
+            }
+            xmlDoc.documentElement.appendChild(train);
+            console.log("Record added: " + x.elements[0].value)
+            showTable()
         }
     </script>
 </body>
