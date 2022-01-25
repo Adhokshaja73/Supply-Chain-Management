@@ -96,10 +96,11 @@ function testPassAndMail() {
         return;
     }
 
-    if (!email.match(/.[@christuniversity.in]/)) {
+    if (!email.match(/.*@christuniversity.in$/)) {
         flag = false;
     }
     if (flag) window.alert("success");
+    else window.alert("Invalid Email");
 }
 
 function setInputFilter(textbox, inputFilter) {
