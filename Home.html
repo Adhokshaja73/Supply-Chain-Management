@@ -10,8 +10,12 @@
     <title>Home</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="Home.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen">
+
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script type="text/javascript" src="index.js"></script>
+
     <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
@@ -31,7 +35,7 @@
     <meta property="og:type" content="website">
 </head>
 
-<body class="u-body u-overlap">
+<body class="u-body u-overlap" id="mBody">
     <header class="top-nav u-clearfix u-header u-palette-1-light-1 u-sticky u-sticky-69dd u-header" id="sec-5cef">
         <div class="u-clearfix u-sheet u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/821405.png" alt=""></span>
             <h4 class="u-text u-text-default u-text-1">Indian Railways</h4>
@@ -54,7 +58,10 @@
                         </li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="Register.html" style="padding: 10px 20px;">Register</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">trains</a>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">Trains</a>
+                        </li>
+                        <li class="u-nav-item">
+                            <button id="toggleMode" onclick="toggleMode();">Toggle</button>
                         </li>
                     </ul>
                 </div>
@@ -70,6 +77,14 @@
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Login.html" style="padding: 10px 20px;">Login</a>
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.html" style="padding: 10px 20px;">Register</a>
+                                </li>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">Trains</a>
+                                </li>
+                                <li class="u-nav-item">
+                                    <label class="switch">
+                                <input type="checkbox" id="toggleMode" o>
+                                <span class="slider round"></span>
+                              </label>
                                 </li>
                             </ul>
                         </div>

@@ -5,6 +5,14 @@
 
 /* The switch - the box around the slider */
 
+.night {
+    background-color: rgb(4, 51, 82);
+}
+
+.day {
+    background-color: rgb(132, 233, 199);
+}
+
 .switch {
     position: relative;
     display: inline-block;

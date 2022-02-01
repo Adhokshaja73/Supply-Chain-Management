@@ -119,3 +119,8 @@ function setInputFilter(textbox, inputFilter) {
         });
     });
 }
+
+
+function toggleMode() {
+    console.log("clicked");
+}
