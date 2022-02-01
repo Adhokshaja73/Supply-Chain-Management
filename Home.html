@@ -35,7 +35,7 @@
     <meta property="og:type" content="website">
 </head>
 
-<body class="u-body u-overlap" id="mBody">
+<body class="u-body u-overlap" id="mBody" onload="getMode();">
     <header class="top-nav u-clearfix u-header u-palette-1-light-1 u-sticky u-sticky-69dd u-header" id="sec-5cef">
         <div class="u-clearfix u-sheet u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/821405.png" alt=""></span>
             <h4 class="u-text u-text-default u-text-1">Indian Railways</h4>
@@ -58,10 +58,11 @@
                         </li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="Register.html" style="padding: 10px 20px;">Register</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">Trains</a>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="JsonSchedule.html" style="padding: 10px 20px;">Trains</a>
                         </li>
                         <li class="u-nav-item">
-                            <button id="toggleMode" onclick="toggleMode();">Toggle</button>
+                            <input type="checkbox" id="modeToggle" value="night" onchange="changeMode();">
+                            <label for="modeToggle">Night</label>
                         </li>
                     </ul>
                 </div>
@@ -78,13 +79,11 @@
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.html" style="padding: 10px 20px;">Register</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">Trains</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="JsonSchedule.html" style="padding: 10px 20px;">Trains</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <label class="switch">
-                                <input type="checkbox" id="toggleMode" o>
-                                <span class="slider round"></span>
-                              </label>
+                                    <input type="checkbox" id="modeToggle" onchange="changeMode();">
+                                    <label for="modeToggle">Night</label>
                                 </li>
                             </ul>
                         </div>

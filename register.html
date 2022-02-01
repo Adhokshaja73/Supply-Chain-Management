@@ -32,7 +32,7 @@
     <meta property="og:type" content="website">
 </head>
 
-<body class="u-body" onload="initForm();">
+<body class="u-body" onload="initForm(); getMode();" id="mBody">
     <header class="top-nav u-clearfix u-header u-palette-1-light-1 u-sticky u-sticky-69dd u-header" id="sec-5cef">
         <div class="u-clearfix u-sheet u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/821405.png" alt=""></span>
             <h4 class="u-text u-text-default u-text-1">Indian Railways</h4>
@@ -55,13 +55,11 @@
                         </li>
                         <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="Register.html" style="padding: 10px 20px;">Register</a>
                         </li>
-                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">Trains</a>
+                        <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="JsonSchedule.html" style="padding: 10px 20px;">Trains</a>
                         </li>
                         <li class="u-nav-item">
-                            <label class="switch">
-                                <input type="checkbox" id="toggleMode" o>
-                                <span class="slider round"></span>
-                              </label>
+                            <input type="checkbox" id="modeToggle" onchange="changeMode();">
+                            <label for="modeToggle">Night</label>
                         </li>
                     </ul>
                 </div>
@@ -78,13 +76,11 @@
                                 </li>
                                 <li class="u-nav-item"><a class="u-button-style u-nav-link" href="Register.html" style="padding: 10px 20px;">Register</a>
                                 </li>
-                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="TrainSchedule.html" style="padding: 10px 20px;">Trains</a>
+                                <li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-grey-90 u-text-hover-palette-2-base" href="JsonSchedule.html" style="padding: 10px 20px;">Trains</a>
                                 </li>
                                 <li class="u-nav-item">
-                                    <label class="switch">
-                                        <input type="checkbox" id="toggleMode" o>
-                                        <span class="slider round"></span>
-                                      </label>
+                                    <input type="checkbox" id="modeToggle" onchange="changeMode();">
+                                    <label for="modeToggle">Night</label>
                                 </li>
                             </ul>
                         </div>
@@ -103,7 +99,7 @@
             .u-body.u-sticky-fixed .u-sticky-69dd:before {
                 border-color: #404040 !important;
                 border-width: 2px !important;
-                borders: top right bottom left !important
+                border: top right bottom left !important
             }
         </style>
     </header>
@@ -136,6 +132,11 @@
                         <button class="u-btn u-btn-submit u-button-style" onclick="console.log('Clicked');testPassAndMail();">Submit</a>
                     </div>
                 </form>
+                <div style="display: flex; flex-direction: row;">
+                        <button onclick="setCookie();"style="margin-left: 20px; border-radius: 4px;" >Set cookies</button>
+                        <button onclick="getCookie();" style="margin-left: 20px; border-radius: 4px;">Read cookies</button>
+                        <button onclick="deleteCookie();" style="margin-left: 20px; border-radius: 4px;">Delete cookies</button>
+                    </div>
             </div>
         </div>
     </section>

@@ -120,7 +120,59 @@ function setInputFilter(textbox, inputFilter) {
     });
 }
 
+function changeMode() {
+    let mode = $('#modeToggle').is(":checked");
+    console.log(mode);
+    if (mode) {
+        document.cookie = "mode=night";
+    } else {
+        document.cookie = "mode=day";
+    }
+    getMode();
+}
 
-function toggleMode() {
-    console.log("clicked");
+function getMode() {
+    let mode = readCookie("mode");
+    if (mode == "night") {
+        document.getElementById("mBody").classList.remove("day");
+        document.getElementById("mBody").classList.add("night");
+    } else {
+        document.getElementById("mBody").classList.remove("night");
+        document.getElementById("mBody").classList.add("day");
+    }
+}
+
+function setCookie() {
+    document.cookie = "username=" + document.getElementById("nameField").value + ";expires=Sun, 20 Feb 2022 12:00:00 UTC;";
+    document.cookie = "email=" + document.getElementById("emailField").value + ";expires=Sun, 20 Feb 2022 12:00:00 UTC;";
+    document.cookie = "password=" + document.getElementById("passField1").value;
+}
+
+function getCookie() {
+    window.alert("username : " + readCookie("username") + "\n" +
+        "Email : " + readCookie("email") + "\n" +
+        "password : " + readCookie("password"))
+}
+
+function deleteCookie() {
+    document.cookie = "username" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = "email" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = "password" + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    window.alert("Coockies are deleted..!")
+}
+
+function readCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
 }
