@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="font-size: 16px;">
+<html style="font-size: 16px;" ng-app="myapp">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,11 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-ie8-build/1.4.7/angular.min.js"></script>
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="angular.min.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="getJson.js" defer=""></script>
+
+
+
     <meta name="generator" content="Nicepage 4.2.6, nicepage.com">
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
 
@@ -32,7 +37,7 @@
     <meta property="og:type" content="website">
 </head>
 
-<body class="u-body" id="mBody" onload="getMode();">
+<body class="u-body" id="mBody" onload="getMode();" ng-controller="myctrl">
     <header class="top-nav u-clearfix u-header u-palette-1-light-1 u-sticky u-sticky-69dd u-header" id="sec-5cef">
         <div class="u-clearfix u-sheet u-sheet-1"><span class="u-file-icon u-icon u-icon-1"><img src="images/821405.png" alt=""></span>
             <h4 class="u-text u-text-default u-text-1">Indian Railways</h4>
@@ -123,8 +128,17 @@
                 <td>Start Station Code</td>
                 <td>End station Name</td>
                 <td>End Station Code</td>
+
             </th>
-            <tbody ng-repeat="train"></tbody>
+            <tr ng-repeat="item in names">
+                <td>{item.train_name}</td>
+                <td>{item.train_code}</td>
+                <td>{item.start_station_name}</td>
+                <td>{item.start_station_code}</td>
+                <td>{item.end_station_name}</td>
+                <td>{item.end_station_code}</td>
+
+            </tr>
         </table>
     </div>
 
