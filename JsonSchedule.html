@@ -11,12 +11,13 @@
     <link rel="stylesheet" href="nicepage.css" media="screen">
     <link rel="stylesheet" href="About.css" media="screen">
     <link rel="stylesheet" href="styles.css" media="screen">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="getJson.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-ie8-build/1.4.7/angular.min.js"></script>
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
-    <script class="u-script" type="text/javascript" src="angular.min.js" defer=""></script>
+
     <script class="u-script" type="text/javascript" src="getJson.js" defer=""></script>
 
 
@@ -110,6 +111,11 @@
             }
         </style>
     </header>
+    <div style="width:100%;display: flex;justify-content: center;">
+        <br>
+        <input type="text" ng-model="searchBox" placeholder="Enter Search Item" style="height: 30px; width: 300px;margin-top: 40px;margin-bottom:50px;">
+        <br>
+    </div>
 
     <div style="width:100%;display: flex;justify-content: center;">
         <style>
@@ -121,24 +127,26 @@
             }
         </style>
         <table>
-            <th>
+            <tr>
                 <td>Train name</td>
                 <td>Train Code</td>
                 <td>Start Station Name</td>
                 <td>Start Station Code</td>
                 <td>End station Name</td>
                 <td>End Station Code</td>
+            </tr>
 
-            </th>
-            <tr ng-repeat="item in names">
-                <td>{item.train_name}</td>
-                <td>{item.train_code}</td>
-                <td>{item.start_station_name}</td>
-                <td>{item.start_station_code}</td>
-                <td>{item.end_station_name}</td>
-                <td>{item.end_station_code}</td>
+            <tr ng-repeat="item in names | filter : searchBox">
+                <td>{{item.train_name}}</td>
+                <td>{{item.train_code}}</td>
+                <td>{{item.start_station_name}}</td>
+                <td>{{item.start_station_code}}</td>
+                <td>{{item.end_station_name}}</td>
+                <td>{{item.end_station_code}}</td>
 
             </tr>
+
+
         </table>
     </div>
 
